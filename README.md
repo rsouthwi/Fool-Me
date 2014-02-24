@@ -1,7 +1,7 @@
 Fool-Me
 =======
 Hello and welcome to my weather app.
-This is the my stab at the Techspandex Skills Assessment - Codey Edition.
+This is my stab at the Techspandex Skills Assessment - Codey Edition.
 It is a small application that allows a user to input location data then
 displays the current weather information based on that location.
 The weather data is provided courtesy of World Weather Online. 
