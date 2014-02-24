@@ -23,6 +23,6 @@ a directory of images -
  - snowing.gif
  - thundering.gif
 
-
+the input will accept regional cities, international cities, countries, zip codes, IP addresses 
 
 enjoy.
