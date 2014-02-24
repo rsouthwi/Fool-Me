@@ -1,0 +1,103 @@
+@charset "UTF-8";
+body {	
+	background-color: #323232;
+}
+legend {
+	font-family:"Century Gothic", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 1.5em;
+	color:#66aa66;
+}
+p {
+	font-family:"Century Gothic", Arial, Helvetica, sans-serif;		
+	font-size: 1.0em;
+	color:#225522;
+	margin: 0px;
+	padding: 3px;
+}
+
+.house {	
+	/*This class is for the placement of the House image(s)*/
+	/*This is located INSIDE the container <div>*/
+	position:absolute;
+	right: 25px;
+	bottom: 50px;
+}
+.bubble  {
+	/*This creates the white area of the speech bubble*/
+	position:absolute;
+	right: 225px;
+	top: 255px;
+	width: 200px;
+	z-index: 10;
+	height: auto;
+	padding: 0px 6px 0px 6px;
+	background: #FFFFFF;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	text-align: center;
+}
+.bubble:after  {
+	/*This creates the triangle portion of the speech bubble*/
+	content: '';
+	position: absolute;
+	right: -55px;
+	top: 25px;
+	border-style: solid;
+	border-width: 5px 0 6px 55px;
+	border-color: transparent #FFFFFF;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+
+#fader {
+	/*This IDs the div of the speech bubble*/	
+	/*It is on a javascript timer so it will appear after the hippo emerges from the house*/	
+    opacity: 0;
+    -webkit-transition: opacity 3s ease-in;
+    -moz-transition: opacity 3s ease-in;
+    -o-transition: opacity 3s ease-in;
+    -ms-transition: opacity 3s ease-in;
+    transition: opacity 3s ease-in;
+}
+#fader.load {
+	/*Javascript will apply this class to the fader div (speech bubble) in order to make it appear*/	
+    opacity: 1;
+}
+#fader.out {
+	/*Javascript will apply this class to the fader div (speech bubble) in order to make it disappear*/	
+    opacity: 0;
+}
+#comingOut  {
+	/*This IDs the image of the hippo coming out of the house*/
+	visibility: visible;
+	z-index: 1;
+}
+#comingIn  {
+	/*This IDs the image of the hippo going back into the house*/
+	visibility: hidden;
+	z-index: 0;
+}
+#container  { 	
+	/*This IDs the div that holds house image*/
+	/*PHP will add a background image to this to display the weather condition*/
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+#footer  {	
+	/*World Weather Online asked me to post this link in exchange for free use of their service*/
+	position: relative;
+	bottom: -10px;
+	left: 0;
+	font-family:"Century Gothic", Arial, Helvetica, sans-serif;		
+	font-size: 0.75em;
+	color:#ccffcc;
+}
+#footer a:link  	{  color:#ccffcc;  }
+#footer a:visited  	{  color:#ccffcc;  }
+#footer a:active	{  color:#ccffcc;  }
+#footer a:hover		{  color:#aaffaa;  }
